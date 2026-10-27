@@ -89,8 +89,6 @@ kbd{font:600 .7rem var(--f-mono);border:1px solid var(--line);border-bottom-widt
 .contact-row{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--card2);min-width:0}
 .contact-row .v{font:500 .85rem var(--f-mono);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0}
 .contact-row button{flex:none}
-.clock{display:flex;justify-content:space-between;align-items:end;margin-top:auto}
-.clock .t{font:700 1.6rem var(--f-display);font-variant-numeric:tabular-nums}
 
 .about{grid-column:span 4}
 .about p{margin:.5rem 0 0;color:var(--muted)}
@@ -253,10 +251,6 @@ dialog::backdrop{background:#000a;backdrop-filter:blur(4px)}
       <div style="display:flex;gap:8px">
         <a class="btn" style="flex:1;justify-content:center" href="https://www.linkedin.com/in/pujithamuttineni/" target="_blank" rel="noopener" id="lnLink">LinkedIn ↗</a>
         <a class="btn" style="flex:1;justify-content:center" href="https://github.com/muttinenipujitha" target="_blank" rel="noopener" id="ghLink">GitHub ↗</a>
-      </div>
-      <div class="clock">
-        <div><p class="label">Local time · IST</p><div class="t" id="clock">--:--</div></div>
-        <span class="hand" id="awake">probably coding</span>
       </div>
     </div>
 
@@ -444,12 +438,6 @@ const roles=['Full-Stack Developer','AI/ML Engineer','Agentic AI builder','LangG
   if(!del&&i<w.length)i++;else if(!del){del=true;return setTimeout(tick,1500)}
   else if(i>0)i--;else{del=false;r=(r+1)%roles.length}
   setTimeout(tick,del?35:70)})()})();
-
-/* ---------- clock ---------- */
-function clock(){const d=new Date();const t=d.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit',hour12:true,timeZone:'Asia/Kolkata'});
- $('#clock').textContent=t;const h=+d.toLocaleString('en-US',{hour:'numeric',hour12:false,timeZone:'Asia/Kolkata'});
- $('#awake').textContent=h<7?'probably asleep 🌙':h<10?'with chai ☕':h<19?'probably coding':h<23?'shipping side projects':'debugging late';}
-clock();setInterval(clock,30000);
 
 /* ---------- counters ---------- */
 function counters(){$$('[data-count]').forEach(el=>{const end=+el.dataset.count,dec=+(el.dataset.dec||0),suf=el.dataset.suf||'';
