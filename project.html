@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Case study | Pujitha.dev</title>
+  <meta name="description" content="Project case study by Muttineni Pujitha." />
+  <meta name="theme-color" content="#0b0c0f" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap">
+      <a href="/" class="logo">pujitha<span>.dev</span></a>
+      <div style="display:flex;gap:20px;align-items:center">
+        <nav class="nav-links" aria-label="Main">
+          <a href="/#work">Work</a>
+          <a href="/#experience">Experience</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+        <button class="icon-btn" id="theme" aria-label="Toggle colour theme"></button>
+        <button class="icon-btn menu-btn" id="menu" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="cs" class="wrap"></main>
+
+  <footer>
+    <div class="wrap">
+      <span>© <span id="year"></span> Muttineni Pujitha</span>
+      <a href="/#contact">Get in touch →</a>
+    </div>
+  </footer>
+
+  <script src="/data.js"></script>
+  <script src="/common.js"></script>
+  <script src="/project.js"></script>
+</body>
+</html>
